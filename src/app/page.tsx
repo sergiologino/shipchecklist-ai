@@ -54,7 +54,7 @@ export default function HomePage() {
             <span className="text-xl font-bold">ShipChecklist<span className="text-emerald-500">.ai</span></span>
           </div>
           <div className="flex items-center gap-6">
-            <a href="#pricing" className="text-sm text-dark-300 hover:text-white transition">Pricing</a>
+            <a href="/history" className="text-sm text-dark-300 hover:text-white transition">My Audits</a><a href="#pricing" className="text-sm text-dark-300 hover:text-white transition">Pricing</a>
             <a href="#faq" className="text-sm text-dark-300 hover:text-white transition">FAQ</a>
           </div>
         </div>
@@ -69,10 +69,10 @@ export default function HomePage() {
               <ClipboardCheck className="w-4 h-4" /> 50+ automated checks
             </div>
             <h1 className="text-5xl sm:text-7xl font-black mb-6 leading-tight">
-              Never launch<br /><span className="text-gradient">unprepared</span> again ✅
+              Never launch<br /><span className="text-gradient">unprepared</span> again вњ…
             </h1>
             <p className="text-xl text-dark-300 mb-10 max-w-2xl mx-auto">
-              AI audits your website for <span className="text-white font-semibold">50+ launch-readiness issues</span> — SEO, security, performance, legal, accessibility — in 30 seconds.
+              AI audits your website for <span className="text-white font-semibold">50+ launch-readiness issues</span> вЂ” SEO, security, performance, legal, accessibility вЂ” in 30 seconds.
             </p>
             <form onSubmit={handleSubmit} className="max-w-2xl mx-auto">
               <div className="flex flex-col sm:flex-row gap-3">
@@ -95,7 +95,7 @@ export default function HomePage() {
       <section className="py-20 px-4">
         <div className="max-w-6xl mx-auto">
           <h2 className="text-3xl sm:text-4xl font-bold text-center mb-4">What we <span className="text-gradient">check</span></h2>
-          <p className="text-dark-300 text-center mb-12 max-w-xl mx-auto">10 categories, 50+ checks — everything you need before launch</p>
+          <p className="text-dark-300 text-center mb-12 max-w-xl mx-auto">10 categories, 50+ checks вЂ” everything you need before launch</p>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {categories.map((f, i) => (
               <motion.div key={i} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ delay: i * 0.1 }} viewport={{ once: true }}
@@ -125,7 +125,7 @@ export default function HomePage() {
             </div>
             <div className="glass-card border-emerald-500/30 relative">
               <div className="absolute -top-3 left-1/2 -translate-x-1/2 px-4 py-1 bg-gradient-to-r from-emerald-500 to-cyan-500 rounded-full text-xs font-bold">COMPLETE</div>
-              <h3 className="text-xl font-bold mb-2">Full Audit ✅</h3>
+              <h3 className="text-xl font-bold mb-2">Full Audit вњ…</h3>
               <div className="text-3xl font-black mb-1">$7.99</div>
               <div className="text-sm text-dark-400 mb-4">per site, one-time</div>
               <ul className="space-y-3 mb-6">
@@ -160,7 +160,7 @@ export default function HomePage() {
 
       <section className="py-20 px-4">
         <div className="max-w-2xl mx-auto text-center">
-          <h2 className="text-3xl font-bold mb-4">Ready to <span className="text-gradient">ship</span>? ✅</h2>
+          <h2 className="text-3xl font-bold mb-4">Ready to <span className="text-gradient">ship</span>? вњ…</h2>
           <p className="text-dark-300 mb-8">Check everything before your users do.</p>
           <button onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })} className="px-8 py-4 bg-gradient-to-r from-emerald-500 to-cyan-500 rounded-xl text-white font-bold text-lg transition glow-green">
             Run Audit Now <ClipboardCheck className="inline w-5 h-5 ml-1" />

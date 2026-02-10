@@ -35,9 +35,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <head>
         <link rel="icon" href="/favicon.svg" />
         <link rel="canonical" href="https://shipchecklist-ai.vercel.app" />
-        <Script src="https://www.googletagmanager.com/gtag/js?id=G-J77YBKV04K" strategy="afterInteractive" />
+        <Script src="https://www.googletagmanager.com/gtag/js?id=GT-K8HQMXXL" strategy="afterInteractive" />
         <Script id="ga" strategy="afterInteractive">
-          {`window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-J77YBKV04K');`}
+          {`window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','GT-K8HQMXXL');`}
         </Script>
       </head>
       <body className="min-h-screen bg-dark-950 text-white antialiased">

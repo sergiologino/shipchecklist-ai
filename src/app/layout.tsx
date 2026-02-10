@@ -6,15 +6,18 @@ import "./globals.css"
 export const metadata: Metadata = {
   title: "ShipChecklist.ai - Pre-Launch Website Audit | 50+ Checks in 30 Seconds",
   description: "AI checks your website for 50+ launch-readiness issues: SEO, performance, security, mobile, legal, accessibility. Never forget a critical item before launch again.",
-  keywords: ["launch checklist", "website audit", "pre-launch check", "SEO audit", "website review", "launch ready", "site checker", "website launch", "pre-launch audit"],
+  keywords: ["launch checklist", "website audit", "pre-launch check", "SEO audit", "website review", "launch ready", "site checker"],
   authors: [{ name: "ShipChecklist.ai" }],
+  verification: {
+    google: "PEKmIb35CVXFC3nX9tl5OVCegBSJDGNx-R8n__jE4ok",
+  },
   openGraph: {
     title: "ShipChecklist.ai - Never Launch Unprepared Again",
-    description: "AI audits your website for 50+ launch-readiness issues in 30 seconds. SEO, security, performance, legal, accessibility.",
+    description: "AI audits your website for 50+ launch-readiness issues in 30 seconds.",
     type: "website",
     url: "https://shipchecklist-ai.vercel.app",
     siteName: "ShipChecklist.ai",
-    images: [{ url: "/api/og", width: 1200, height: 630, alt: "ShipChecklist.ai - Pre-Launch Audit" }],
+    images: [{ url: "/api/og", width: 1200, height: 630, alt: "ShipChecklist.ai" }],
   },
   twitter: {
     card: "summary_large_image",

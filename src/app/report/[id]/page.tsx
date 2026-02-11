@@ -83,7 +83,7 @@ export default function ReportPage({ params }: { params: { id: string } }) {
         </motion.div>
 
         <div className="space-y-6 mb-8">
-          <h2 className="text-xl font-bold flex items-center gap-2"><Unlock className="w-5 h-5 text-green-500" /> Free Checks</h2>
+          <h2 className="text-xl font-bold flex items-center gap-2"><Unlock className="w-5 h-5 text-green-500" /> {report.isPaid || paidCategories.length === 0 ? "Full Audit" : "Free Checks"}</h2>
           {freeCategories.map((cat, i) => <CheckCategoryCard key={i} category={cat} index={i} />)}
         </div>
 

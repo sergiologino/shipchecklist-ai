@@ -113,7 +113,7 @@ export default function ReportPage({ params }: { params: { id: string } }) {
           </div>
         )}
 
-        <div className="mt-12 mb-8"><ShareButtons score={report.overallScore} url={report.url} /></div>
+        <div className="mt-12 mb-8"><ShareButtons score={report.overallScore} url={report.url} reportId={params.id} /></div>
         <div className="text-center space-y-2">
           <Link href="/" className="text-emerald-500 hover:underline text-sm block">Check another site →</Link>
           <a href="https://roastpage-ai.com" className="text-orange-400 hover:underline text-sm block">Also try: RoastPage.ai - AI Landing Page Roaster 🔥</a>

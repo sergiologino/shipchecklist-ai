@@ -1,21 +1,21 @@
 "use client"
 import { Share2 } from "lucide-react"
 import { toast } from "sonner"
+import { extractDomain } from "@/lib/utils"
 
-export default function ShareButtons({ score, url }: { score: number; url: string }) {
-  const siteUrl = typeof window !== "undefined" ? window.location.origin : "https://shipchecklist-ai.vercel.app"
-  const text = `My website scored ${score}/100 on the pre-launch checklist! ${siteUrl}`
-  const enc = encodeURIComponent(text)
-  const encUrl = encodeURIComponent(siteUrl)
+export default function ShareButtons({ score, url, reportId }: { score: number; url: string; reportId?: string }) {
+  const domain = extractDomain(url)
+  const shareUrl = reportId ? `https://shipchecklist-ai.vercel.app/share/${reportId}` : "https://shipchecklist-ai.vercel.app"
+  const text = `${domain} scored ${score}/100 on ShipChecklist.ai pre-launch audit`
 
   const channels = [
-    { name: "Twitter", icon: "X", href: `https://twitter.com/intent/tweet?text=${enc}` },
-    { name: "LinkedIn", icon: "in", href: `https://www.linkedin.com/sharing/share-offsite/?url=${encUrl}` },
-    { name: "Telegram", icon: "TG", href: `https://t.me/share/url?url=${encUrl}&text=${enc}` },
-    { name: "WhatsApp", icon: "WA", href: `https://wa.me/?text=${enc}` },
+    { name: "X Twitter", href: `https://twitter.com/intent/tweet?text=${encodeURIComponent(text)}&url=${encodeURIComponent(shareUrl)}` },
+    { name: "LinkedIn", href: `https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(shareUrl)}` },
+    { name: "Telegram", href: `https://t.me/share/url?url=${encodeURIComponent(shareUrl)}&text=${encodeURIComponent(text)}` },
+    { name: "WhatsApp", href: `https://wa.me/?text=${encodeURIComponent(text + " " + shareUrl)}` },
   ]
 
-  async function copyLink() { await navigator.clipboard.writeText(siteUrl); toast.success("Link copied!") }
+  async function copyLink() { await navigator.clipboard.writeText(shareUrl); toast.success("Link copied!") }
 
   return (
     <div className="text-center">
@@ -24,7 +24,7 @@ export default function ShareButtons({ score, url }: { score: number; url: strin
         {channels.map(ch => (
           <a key={ch.name} href={ch.href} target="_blank" rel="noopener noreferrer"
             className="inline-flex items-center gap-2 px-4 py-2.5 bg-dark-800 border border-dark-600 rounded-xl text-sm font-medium transition hover:bg-white/10">
-            {ch.icon} {ch.name}
+            {ch.name}
           </a>
         ))}
         <button onClick={copyLink} className="inline-flex items-center gap-2 px-4 py-2.5 bg-dark-800 border border-dark-600 rounded-xl text-sm font-medium transition hover:bg-white/10">
